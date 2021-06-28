@@ -1,0 +1,144 @@
+* {
+    margin:0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+.header {
+    background-image: linear-gradient(to right, rgb(13, 16, 173), rgb(55, 12, 116));
+    padding: 20px;
+}
+.header h1 {
+    margin-top:30px;
+    text-align: center;
+    color: #FAFAFA;
+    font-family: sans-serif;
+}
+.input_area {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100px;
+}
+.input_area input {
+    padding: 15px;
+    width:600px;
+    outline:none;
+    font-size:20px;
+    border:none;
+}
+.input_area button {
+    padding: 15px;
+    outline:none;
+    font-size:20px;
+    background-color: #101cc2;
+    color:#FAFAFA;
+    border:2px #101cc2 solid;
+    margin-left:20px;
+    box-shadow: 0px 0px 2px 0.7px #0d10da;
+    
+}
+.input_area button:hover {
+    background-color: #0f1eec;
+    border:2px #101cc2 solid;
+    cursor: pointer;
+}
+.input_area button:active {
+    padding: 15px;
+    outline:none;
+    font-size:20px;
+    background-color: #03084e;
+    color:#FAFAFA;
+    border:2px #101cc2 solid;
+    margin-left:20px;
+    cursor: pointer;
+}
+.todos {
+    display:flex;
+    align-items: center;
+    flex-direction: column;
+    padding:20px;
+}
+.todo {
+    display: flex;
+    align-items: center;
+    width:700px;
+    box-shadow: 0px 0px 5px 1px #d1cece;
+    margin-top:20px;
+    padding:10px;
+}
+.todo-content {
+    width:100%;
+    padding:5px;
+}
+.todo-content input{
+    padding:5px;
+    font-family: sans-serif;
+    font-size: 19px;
+    width:100%;
+    border:none;
+}
+.todo button {
+    padding:10px 12px;
+    font-size:16px;
+    color:#FAFAFA;
+    background-color: rgb(13, 16, 173);
+    border:none;
+    border-radius: 4px;
+    cursor:pointer;
+}
+
+.full_screen {
+    top:0px;
+    left:0px;
+    position: fixed;
+    width:0px;
+    min-height:100vh;
+    display: flex;
+    align-items: flex-end; 
+    z-index: 1;
+    background-color: red;
+}
+.full_screen  .info_area {
+    min-width:fit-content;
+    min-height:100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+}
+@keyframes opacity {
+    from {
+    opacity:1;}
+    to {
+    opacity:0;}
+}
+@keyframes toRight {
+    from {margin-left:-300px}
+    to {margin-left:20px}
+}
+
+.todo_event_info {
+    margin-left:20px;
+    margin-bottom:10px;
+    font-family:sans-serif;
+    letter-spacing: 0.5px;
+    color:#FAFAFA;
+    text-align: center;
+    border-radius: 7px;
+    box-shadow: 0px 0px 7px 0.7px #bbb9b9;
+    animation-name: opacity , toRight;
+    animation-duration: 7s,1s;
+    animation-delay: 2s , 0s;
+    animation-fill-mode: forwards,forwards;
+    width:250px;
+}
+
+.success {
+    background-color: #1aeb08;
+    width:300px;
+    padding:10px;
+}
+.warning {
+    background-color: #eb0808;
+    width:300px;
+    padding:10px;
+}
